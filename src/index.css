@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-700 antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand-gold/30 text-brand-navy;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl;
+  }
+
+  .section-copy {
+    @apply max-w-2xl text-base leading-7 text-slate-600;
+  }
+
+  .eyebrow {
+    @apply mb-3 text-xs font-extrabold uppercase tracking-[0.2em] text-brand-blue;
+  }
+
+  .card-surface {
+    @apply rounded-3xl border border-slate-200/80 bg-white/90 shadow-soft backdrop-blur;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center rounded-full bg-brand-navy px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-blue focus:outline-none focus:ring-4 focus:ring-brand-gold/40;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-brand-navy shadow-soft transition hover:-translate-y-0.5 hover:border-brand-blue hover:text-brand-blue focus:outline-none focus:ring-4 focus:ring-brand-gold/30;
+  }
+
+  .nav-link {
+    @apply rounded-full px-4 py-2 text-sm font-semibold text-brand-navy transition hover:bg-white hover:text-brand-blue focus:outline-none focus:ring-4 focus:ring-brand-gold/30;
+  }
+
+  .input-field {
+    @apply w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-700 shadow-sm transition placeholder:text-slate-400 focus:border-brand-blue focus:outline-none focus:ring-4 focus:ring-brand-gold/20;
+  }
+}
